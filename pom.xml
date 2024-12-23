@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gzu</groupId>
+    <artifactId>springboot-training</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springboot-training</name>
+    <description>springboot-training</description>
+
+    <!-- 父模块的打包方式 -->
+    <packaging>pom</packaging>
+
+    <!-- parent指明继承关系，指明继承的父类 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.1</version>
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <modules>
+        <module>training-common</module>    <!-- 公共模块（工具类、通用配置等） -->
+        <module>training-user</module>  <!-- 用户管理模块 -->
+        <module>training-course</module>    <!-- 培训课程管理模块 -->
+        <module>training-enrollment</module>    <!-- 培训报名模块 -->
+        <module>training-progress</module>  <!-- 培训进度跟踪模块 -->
+        <module>training-feedback</module>  <!-- 培训反馈模块 -->
+        <module>training-web</module>   <!-- Web层（整合所有模块，提供统一的入口） -->
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>
